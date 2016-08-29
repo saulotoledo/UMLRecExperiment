@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+</head>
+<body>
+    <div th:fragment="options">
+
+        <script th:inline="javascript">
+        /*<![CDATA[*/
+            var dialogTitlePSM = [[#{SEQUENCE_FEATURE_PSM_INFO_TITLE}]];
+            var dialogTitlePACM = [[#{SEQUENCE_FEATURE_PACM_INFO_TITLE}]];
+            var dialogTitlePASM = [[#{SEQUENCE_FEATURE_PASM_INFO_TITLE}]];
+            var dialogTitlePRM = [[#{SEQUENCE_FEATURE_PRM_INFO_TITLE}]];
+            var dialogTitlePCM = [[#{SEQUENCE_FEATURE_PCM_INFO_TITLE}]];
+            var dialogTitlePDM = [[#{SEQUENCE_FEATURE_PDM_INFO_TITLE}]];
+            var dialogTitlePCoACF = [[#{SEQUENCE_FEATURE_PCoACF_INFO_TITLE}]];
+            var dialogTitlePCoOCF = [[#{SEQUENCE_FEATURE_PCoOCF_INFO_TITLE}]];
+            var dialogTitlePItCF = [[#{SEQUENCE_FEATURE_PItCF_INFO_TITLE}]];
+            var dialogTitlePBCF = [[#{SEQUENCE_FEATURE_PBCF_INFO_TITLE}]];
+            var dialogTitlePCuCF = [[#{SEQUENCE_FEATURE_PCuCF_INFO_TITLE}]];
+            var dialogTitlePWCF = [[#{SEQUENCE_FEATURE_PWCF_INFO_TITLE}]];
+            var dialogTitlePSCF = [[#{SEQUENCE_FEATURE_PSCF_INFO_TITLE}]];
+            var dialogTitlePNCF = [[#{SEQUENCE_FEATURE_PNCF_INFO_TITLE}]];
+            var dialogTitlePCrCF = [[#{SEQUENCE_FEATURE_PCrCF_INFO_TITLE}]];
+            var dialogTitlePIgCF = [[#{SEQUENCE_FEATURE_PIgCF_INFO_TITLE}]];
+            var dialogTitlePCsCF = [[#{SEQUENCE_FEATURE_PCsCF_INFO_TITLE}]];
+            var dialogTitlePACF = [[#{SEQUENCE_FEATURE_PACF_INFO_TITLE}]];
+            var dialogTitlePIU = [[#{SEQUENCE_FEATURE_PIU_INFO_TITLE}]];
+            var dialogTitlePAc = [[#{SEQUENCE_FEATURE_PAc_INFO_TITLE}]];
+            var dialogTitlePSI = [[#{SEQUENCE_FEATURE_PSI_INFO_TITLE}]];
+        /*]]>*/
+        </script>
+		<form method="POST" role="form" th:action="@{/2}">
+		    <div class="row">
+		        <div class="col-lg-6 col-md-6 col-xs-12">
+		            <div class="form-group">
+		                <div class="checkbox">
+		                    <label>
+		                        <input type="checkbox" name="userprofile" value="PSM" />
+		                        <span class="checkbox-material">
+		                            <span class="check"></span>
+		                        </span>
+		                        &nbsp; <span th:text="#{SEQUENCE_FEATURE_PSM}"></span> &nbsp;
+		                        
+		                        <a href="javascript:;" onclick="eModal.iframe('helpdialogs/sequence/sequence_help_PSM.html', dialogTitlePSM)">
+		                            <span class="glyphicon glyphicon-question-sign"></span>
+		                        </a>
+		                    </label>
+		                </div>
+		            </div>
+		            <div class="form-group">
+		                <div class="checkbox">
+		                    <label>
+		                        <input type="checkbox" name="userprofile" value="PACM" />
+		                        <span class="checkbox-material">
+		                            <span class="check"></span>
+		                        </span>
+		                        &nbsp; <span th:text="#{SEQUENCE_FEATURE_PACM}"></span> &nbsp;
+		                        
+		                        <a href="javascript:;" onclick="eModal.iframe('helpdialogs/sequence/sequence_help_PACM.html', dialogTitlePACM)">
+		                            <span class="glyphicon glyphicon-question-sign"></span>
+		                        </a>
+		                    </label>
+		                </div>
+		            </div>
+					<div class="form-group">
+		                <div class="checkbox">
+		                    <label>
+		                        <input type="checkbox" name="userprofile" value="PASM" />
+		                        <span class="checkbox-material">
+		                            <span class="check"></span>
+		                        </span>
+		                        &nbsp; <span th:text="#{SEQUENCE_FEATURE_PASM}"></span> &nbsp;
+		                        
+		                        <a href="javascript:;" onclick="eModal.iframe('helpdialogs/sequence/sequence_help_PASM.html', dialogTitlePASM)">
+		                            <span class="glyphicon glyphicon-question-sign"></span>
+		                        </a>
+		                    </label>
+		                </div>
+		            </div>
+					<div class="form-group">
+		                <div class="checkbox">
+		                    <label>
+		                        <input type="checkbox" name="userprofile" value="PRM" />
+		                        <span class="checkbox-material">
+		                            <span class="check"></span>
+		                        </span>
+		                        &nbsp; <span th:text="#{SEQUENCE_FEATURE_PRM}"></span> &nbsp;
+		                        
+		                        <a href="javascript:;" onclick="eModal.iframe('helpdialogs/sequence/sequence_help_PRM.html', dialogTitlePRM)">
+		                            <span class="glyphicon glyphicon-question-sign"></span>
+		                        </a>
+		                    </label>
+		                </div>
+		            </div>
+		            <div class="form-group">
+		                <div class="checkbox">
+		                    <label>
+		                        <input type="checkbox" name="userprofile" value="PCM" />
+		                        <span class="checkbox-material">
+		                            <span class="check"></span>
+		                        </span>
+		                        &nbsp; <span th:text="#{SEQUENCE_FEATURE_PCM}"></span> &nbsp;
+		                        
+		                        <a href="javascript:;" onclick="eModal.iframe('helpdialogs/sequence/sequence_help_PCM.html', dialogTitlePCM)">
+		                            <span class="glyphicon glyphicon-question-sign"></span>
+		                        </a>
+		                    </label>
+		                </div>
+		            </div>
+		            <div class="form-group">
+		                <div class="checkbox">
+		                    <label>
+		                        <input type="checkbox" name="userprofile" value="PDM" />
+		                        <span class="checkbox-material">
+		                            <span class="check"></span>
+		                        </span>
+		                        &nbsp; <span th:text="#{SEQUENCE_FEATURE_PDM}"></span> &nbsp;
+		                        
+		                        <a href="javascript:;" onclick="eModal.iframe('helpdialogs/sequence/sequence_help_PDM.html', dialogTitlePDM)">
+		                            <span class="glyphicon glyphicon-question-sign"></span>
+		                        </a>
+		                    </label>
+		                </div>
+		            </div>
+		            <div class="form-group">
+		                <div class="checkbox">
+		                    <label>
+		                        <input type="checkbox" name="userprofile" value="PCoACF" />
+		                        <span class="checkbox-material">
+		                            <span class="check"></span>
+		                        </span>
+		                        &nbsp; <span th:text="#{SEQUENCE_FEATURE_PCoACF}"></span> &nbsp;
+		                        
+		                        <a href="javascript:;" onclick="eModal.iframe('helpdialogs/sequence/sequence_help_PCoACF.html', dialogTitlePCoACF)">
+		                            <span class="glyphicon glyphicon-question-sign"></span>
+		                        </a>
+		                    </label>
+		                </div>
+		            </div>
+		            <div class="form-group">
+		                <div class="checkbox">
+		                    <label>
+		                        <input type="checkbox" name="userprofile" value="PCoOCF" />
+		                        <span class="checkbox-material">
+		                            <span class="check"></span>
+		                        </span>
+		                        &nbsp; <span th:text="#{SEQUENCE_FEATURE_PCoOCF}"></span> &nbsp;
+		                        
+		                        <a href="javascript:;" onclick="eModal.iframe('helpdialogs/sequence/sequence_help_PCoOCF.html', dialogTitlePCoOCF)">
+		                            <span class="glyphicon glyphicon-question-sign"></span>
+		                        </a>
+		                    </label>
+		                </div>
+		            </div>
+		            <div class="form-group">
+		                <div class="checkbox">
+		                    <label>
+		                        <input type="checkbox" name="userprofile" value="PBCF" />
+		                        <span class="checkbox-material">
+		                            <span class="check"></span>
+		                        </span>
+		                        &nbsp; <span th:text="#{SEQUENCE_FEATURE_PBCF}"></span> &nbsp;
+		                        
+		                        <a href="javascript:;" onclick="eModal.iframe('helpdialogs/sequence/sequence_help_PBCF.html', dialogTitlePBCF)">
+		                            <span class="glyphicon glyphicon-question-sign"></span>
+		                        </a>
+		                    </label>
+		                </div>
+		            </div>
+		            <div class="form-group">
+		                <div class="checkbox">
+		                    <label>
+		                        <input type="checkbox" name="userprofile" value="PCuCF" />
+		                        <span class="checkbox-material">
+		                            <span class="check"></span>
+		                        </span>
+		                        &nbsp; <span th:text="#{SEQUENCE_FEATURE_PCuCF}"></span> &nbsp;
+		                        
+		                        <a href="javascript:;" onclick="eModal.iframe('helpdialogs/sequence/sequence_help_PCuCF.html', dialogTitlePCuCF)">
+		                            <span class="glyphicon glyphicon-question-sign"></span>
+		                        </a>
+		                    </label>
+		                </div>
+		            </div>
+		            <div class="form-group">
+		                <div class="checkbox">
+		                    <label>
+		                        <input type="checkbox" name="userprofile" value="PSCF" />
+		                        <span class="checkbox-material">
+		                            <span class="check"></span>
+		                        </span>
+		                        &nbsp; <span th:text="#{SEQUENCE_FEATURE_PSCF}"></span> &nbsp;
+		                        
+		                        <a href="javascript:;" onclick="eModal.iframe('helpdialogs/sequence/sequence_help_PSCF.html', dialogTitlePSCF)">
+		                            <span class="glyphicon glyphicon-question-sign"></span>
+		                        </a>
+		                    </label>
+		                </div>
+		            </div>
+		        </div>
+		    
+		        <div class="col-lg-6 col-md-6 col-xs-12 secondcol">
+                    <div class="form-group">
+                        <div class="checkbox">
+                            <label>
+                                <input type="checkbox" name="userprofile" value="PItCF" />
+                                <span class="checkbox-material">
+                                    <span class="check"></span>
+                                </span>
+                                &nbsp; <span th:text="#{SEQUENCE_FEATURE_PItCF}"></span> &nbsp;
+                                
+                                <a href="javascript:;" onclick="eModal.iframe('helpdialogs/sequence/sequence_help_PItCF.html', dialogTitlePItCF)">
+                                    <span class="glyphicon glyphicon-question-sign"></span>
+                                </a>
+                            </label>
+                        </div>
+                    </div>
+		            <div class="form-group">
+		                <div class="checkbox">
+		                    <label>
+		                        <input type="checkbox" name="userprofile" value="PCrCF" />
+		                        <span class="checkbox-material">
+		                            <span class="check"></span>
+		                        </span>
+		                        &nbsp; <span th:text="#{SEQUENCE_FEATURE_PCrCF}"></span> &nbsp;
+		                        
+		                        <a href="javascript:;" onclick="eModal.iframe('helpdialogs/sequence/sequence_help_PCrCF.html', dialogTitlePCrCF)">
+		                            <span class="glyphicon glyphicon-question-sign"></span>
+		                        </a>
+		                    </label>
+		                </div>
+		            </div>
+		            <div class="form-group">
+		                <div class="checkbox">
+		                    <label>
+		                        <input type="checkbox" name="userprofile" value="PNCF" />
+		                        <span class="checkbox-material">
+		                            <span class="check"></span>
+		                        </span>
+		                        &nbsp; <span th:text="#{SEQUENCE_FEATURE_PNCF}"></span> &nbsp;
+		                        
+		                        <a href="javascript:;" onclick="eModal.iframe('helpdialogs/sequence/sequence_help_PNCF.html', dialogTitlePNCF)">
+		                            <span class="glyphicon glyphicon-question-sign"></span>
+		                        </a>
+		                    </label>
+		                </div>
+		            </div>
+		            <div class="form-group">
+		                <div class="checkbox">
+		                    <label>
+		                        <input type="checkbox" name="userprofile" value="PACF" />
+		                        <span class="checkbox-material">
+		                            <span class="check"></span>
+		                        </span>
+		                        &nbsp; <span th:text="#{SEQUENCE_FEATURE_PACF}"></span> &nbsp;
+		                        
+		                        <a href="javascript:;" onclick="eModal.iframe('helpdialogs/sequence/sequence_help_PACF.html', dialogTitlePACF)">
+		                            <span class="glyphicon glyphicon-question-sign"></span>
+		                        </a>
+		                    </label>
+		                </div>
+		            </div>
+		            <div class="form-group">
+		                <div class="checkbox">
+		                    <label>
+		                        <input type="checkbox" name="userprofile" value="PIgCF" />
+		                        <span class="checkbox-material">
+		                            <span class="check"></span>
+		                        </span>
+		                        &nbsp; <span th:text="#{SEQUENCE_FEATURE_PIgCF}"></span> &nbsp;
+		                        
+		                        <a href="javascript:;" onclick="eModal.iframe('helpdialogs/sequence/sequence_help_PIgCF.html', dialogTitlePIgCF)">
+		                            <span class="glyphicon glyphicon-question-sign"></span>
+		                        </a>
+		                    </label>
+		                </div>
+		            </div>
+		            <div class="form-group">
+		                <div class="checkbox">
+		                    <label>
+		                        <input type="checkbox" name="userprofile" value="PCsCF" />
+		                        <span class="checkbox-material">
+		                            <span class="check"></span>
+		                        </span>
+		                        &nbsp; <span th:text="#{SEQUENCE_FEATURE_PCsCF}"></span> &nbsp;
+		                        
+		                        <a href="javascript:;" onclick="eModal.iframe('helpdialogs/sequence/sequence_help_PCsCF.html', dialogTitlePCsCF)">
+		                            <span class="glyphicon glyphicon-question-sign"></span>
+		                        </a>
+		                    </label>
+		                </div>
+		            </div>
+		            <div class="form-group">
+		                <div class="checkbox">
+		                    <label>
+		                        <input type="checkbox" name="userprofile" value="PWCF" />
+		                        <span class="checkbox-material">
+		                            <span class="check"></span>
+		                        </span>
+		                        &nbsp; <span th:text="#{SEQUENCE_FEATURE_PWCF}"></span> &nbsp;
+		                        
+		                        <a href="javascript:;" onclick="eModal.iframe('helpdialogs/sequence/sequence_help_PWCF.html', dialogTitlePWCF)">
+		                            <span class="glyphicon glyphicon-question-sign"></span>
+		                        </a>
+		                    </label>
+		                </div>
+		            </div>
+		            <div class="form-group">
+		                <div class="checkbox">
+		                    <label>
+		                        <input type="checkbox" name="userprofile" value="PAc" />
+		                        <span class="checkbox-material">
+		                            <span class="check"></span>
+		                        </span>
+		                        &nbsp; <span th:text="#{SEQUENCE_FEATURE_PAc}"></span> &nbsp;
+		                        
+		                        <a href="javascript:;" onclick="eModal.iframe('helpdialogs/sequence/sequence_help_PAc.html', dialogTitlePAc)">
+		                            <span class="glyphicon glyphicon-question-sign"></span>
+		                        </a>
+		                    </label>
+		                </div>
+		            </div>
+		            <div class="form-group">
+		                <div class="checkbox">
+		                    <label>
+		                        <input type="checkbox" name="userprofile" value="PSI" />
+		                        <span class="checkbox-material">
+		                            <span class="check"></span>
+		                        </span>
+		                        &nbsp; <span th:text="#{SEQUENCE_FEATURE_PSI}"></span> &nbsp;
+		                        
+		                        <a href="javascript:;" onclick="eModal.iframe('helpdialogs/sequence/sequence_help_PSI.html', dialogTitlePSI)">
+		                            <span class="glyphicon glyphicon-question-sign"></span>
+		                        </a>
+		                    </label>
+		                </div>
+		            </div>
+		            <div class="form-group">
+		                <div class="checkbox">
+		                    <label>
+		                        <input type="checkbox" name="userprofile" value="PIU" />
+		                        <span class="checkbox-material">
+		                            <span class="check"></span>
+		                        </span>
+		                        &nbsp; <span th:text="#{SEQUENCE_FEATURE_PIU}"></span> &nbsp;
+		                        
+		                        <a href="javascript:;" onclick="eModal.iframe('helpdialogs/sequence/sequence_help_PIU.html', dialogTitlePIU)">
+		                            <span class="glyphicon glyphicon-question-sign"></span>
+		                        </a>
+		                    </label>
+		                </div>
+		            </div>
+		        </div>
+		    </div>
+		        
+		    <div class="row">
+		        <div class="col-sm-12">
+		            <div class="form-group">
+                        <button type="submit"
+                                name="submit"
+                                id="secondFormSubmit"
+                                class="btn btn-lg btn-primary ladda-button pull-right"
+                                ladda="submitting"
+                                data-style="expand-right">
+                            <span class="ladda-label" th:text="#{STEP01_SUBMIT_BUTTON}"></span>
+                        </button>
+		            </div>
+		        </div>
+		    </div>
+		</form>
+    </div>
+</body>
+</html>

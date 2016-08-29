@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html layout:decorator="layout">
+<head>
+    <title></title>
+</head>
+<body>
+    <div layout:fragment="content">
+		<div class="container pt">
+		    <div class="row mt">
+		        <div class="col-lg-6 col-lg-offset-3 centered">
+		            <h3 th:text="#{SECOND_STEP_TITLE}"></h3>
+		            <hr />
+		            <p th:if="${diagramType == 'class'}" th:text="#{SECOND_STEP_INTRO_CLASS}"></p>
+		            <p th:if="${diagramType == 'sequence'}" th:text="#{SECOND_STEP_INTRO_SEQUENCE}"></p>
+		        </div>
+		    </div>
+		    <div class="row mt">
+		        <div class="col-lg-8 col-lg-offset-2">
+		            <div th:if="${diagramType == 'class'}">
+					    <div th:replace="steps/step02_class_options :: options"></div>
+					</div>
+					<div th:if="${diagramType == 'sequence'}">
+					    <div th:replace="steps/step02_sequence_options :: options"></div>
+					</div>
+		        </div>
+		    </div>
+		    <!-- /row -->
+		</div>
+		<!-- /container -->
+    </div>
+</body>
+</html>

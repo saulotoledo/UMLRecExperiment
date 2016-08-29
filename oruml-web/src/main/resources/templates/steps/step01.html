@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html layout:decorator="layout">
+<head>
+    <title></title>
+</head>
+<body>
+    <div layout:fragment="content">
+        
+		<!-- +++++ Welcome Section +++++ -->
+		<div id="ww">
+		    <div class="container">
+		        <div class="row">
+		            <div class="col-lg-8 col-lg-offset-2 centered">
+		                <h1 th:text="#{WELCOME_TITLE}"></h1>
+		                <p th:text="#{WELCOME_MESSAGE_01}"></p>
+		                <p class="highlight" th:text="#{WELCOME_MESSAGE_02}"></p>
+		                <p th:text="#{WELCOME_MESSAGE_03}"></p>
+		                <p th:text="#{WELCOME_MESSAGE_04}"></p>
+                        <p th:text="#{WELCOME_MESSAGE_05}"></p>
+                        <p th:text="#{WELCOME_MESSAGE_06}"></p>
+		            </div>
+		            <!-- /col-lg-8 -->
+		        </div>
+		        <!-- /row -->
+		    </div>
+		    <!-- /container -->
+		</div>
+		<!-- /ww -->
+		
+		<div class="container pt">
+		    <div class="row mt">
+		        <div class="col-lg-6 col-lg-offset-3 centered">
+		            <h3 th:text="#{FIRST_STEP_TITLE}"></h3>
+		            <hr />
+		            <p th:text="#{FIRST_STEP_INTRO}"></p>
+		        </div>
+		    </div>
+		    <div class="row mt">
+		        <div class="col-lg-8 col-lg-offset-2">
+		            <form method="POST" role="form" th:action="@{/1}" novalidate="novalidate">
+		                <div class="form-group">
+		                    <input type="text"
+		                           name="name"
+		                           input-valid-chars="'/[^0-9a-z-_.]+/gi'"
+		                           required="required"
+		                           minlength="7"
+		                           class="form-control"
+		                           required-err-type="requiredField"
+		                           minlength-err-type="minLength"
+		                           th:placeholder="#{STEP01_NAME}" />
+		                    <br />
+		                </div>
+		                <div class="form-group">
+		                    <input type="email"
+		                           name="email"
+		                           input-valid-chars="'/[^0-9a-z-_.@]+/gi'"
+		                           required="required"
+		                           minlength="7"
+		                           class="form-control"
+		                           required-err-type="requiredField"
+		                           email-err-type="insertValidEmail"
+		                           minlength-err-type="minLength"
+		                           th:placeholder="#{STEP01_EMAIL}" />
+		                    <br />
+		                </div>
+		                <div class="form-group">
+		                    <label th:text="#{STEP01_DEGREE}"></label>
+		                    <select name="degree"
+		                            required="required"
+		                            required-err-type="requiredField"
+		                            class="form-control select-search"
+		                            >
+	                            <option value=""></option>
+		                        <option value="graduate_current" ng-selected="degree == 'graduate_current'" th:text="#{STEP01_DEGREE_OPTION_GRADUATE_CURRENT}"></option>
+		                        <option value="graduate_finished" ng-selected="degree == 'graduate_finished'" th:text="#{STEP01_DEGREE_OPTION_GRADUATE_FINISHED}"></option>
+		                        <option value="postgraduate_current" ng-selected="degree == 'postgraduate_current'" th:text="#{STEP01_DEGREE_OPTION_POSTGRADUATE_CURRENT}"></option>
+		                        <option value="postgraduate_finished" ng-selected="degree == 'postgraduate_finished'" th:text="#{STEP01_DEGREE_OPTION_POSTGRADUATE_FINISHED}"></option>
+		                    </select>
+		                    <br />
+		                </div>
+		                
+		                <div class="form-group">
+		                    <div class="checkbox">
+		                        <label>
+		                            <input type="checkbox" name="hasProfessionalExperience" />
+		                            <span class="checkbox-material">
+		                                <span class="check"></span>
+		                            </span>
+		                            &nbsp; <span th:text="#{STEP01_HAS_PROFESSIONAL_EXPERIENCE}"></span>
+		                        </label>
+		                    </div>
+		                </div>
+		                
+		                <div class="form-group">
+		                    <div class="checkbox">
+		                        <label>
+		                            <input id="acceptAgreement" type="checkbox" name="acceptAgreement" />
+		                            <span class="checkbox-material">
+		                                <span class="check"></span>
+		                            </span>
+		                            &nbsp; <span th:text="#{STEP01_AGREEMENT_INTRO}"></span>
+		                            <a href="javascript:;"
+		                               th:onclick="${'eModal.iframe(`agreement.html`, `'} + #{AGREEMENT_TERMS_TITLE} + ${'`)'}"
+		                               th:text="#{STEP01_AGREEMENT_LINK}">
+	                                </a>.
+		                        </label>
+		                    </div>
+		                </div>
+		
+		                <div class="form-group">
+		                    <button type="submit"
+		                            name="submit"
+		                            id="firstFormSubmit"
+		                            ng-disabled="!acceptedAgreement"
+		                            class="btn btn-lg btn-primary ladda-button pull-right"
+		                            ladda="submitting"
+		                            data-style="expand-right">
+		                            <span class="ladda-label" th:text="#{STEP01_SUBMIT_BUTTON}"></span>
+		                    </button>
+		                </div>
+		            </form>
+		        </div>
+		    </div>
+		    <!-- /row -->
+		</div>
+		<!-- /container -->
+    </div>
+</body>
+</html>

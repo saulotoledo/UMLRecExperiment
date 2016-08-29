@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    
+    <link href="/webjars/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="/webjars/bootstrap-material-design/0.3.0/dist/css/material.css" rel="stylesheet" />
+    <link href="/webjars/bootstrap-material-design/0.3.0/dist/css/ripples.css" rel="stylesheet" />
+    <link href="/css/styles.css" rel="stylesheet" />
+</head>
+<body>
+<div class="container agreement-term">
+    <div class="row">
+        <div class="col-xs-12">
+            <p>Generalização é um relacionamento entre um elemento mais geral e um mais específico.
+            Através desse relacionamento, classes herdam atributos, operações, relacionamentos e
+            restrições de sua(s) super-classe(s). Sub-classes podem adicionar novas características
+            e também sobrescrever as já existentes em sua superclasse (respeitando-se as possíveis
+            restrições).</p>
+            
+			<p>Um conjunto de generalizações define um conjunto particular de relacionamentos de generalização
+			capazes de descrever a forma com a qual a superclasse pode ser dividida usando subtipos
+			específicos.</p>
+			
+			<p>Cada conjunto de generalizações tem duas propriedades. A primeira, <i>isCovering</i>, especifica
+			se o conjunto de <i>classificadores</i> naquele conjunto de generalizações é completo ou incompleto,
+			podendo assumir um dos seguintes valores:</p>
+			
+			<ul>
+			    <li><strong>complete:</strong> o conjunto é completo, ou seja, cada instância do <i>classificador</i> mais geral é também
+			    uma instância de (pelo menos) um dos específicos;</li>
+			    
+			    <li><strong>incomplete:</strong> o conjunto é incompleto, ou seja, pode haver algumas instâncias
+			    do <i>classificador</i> mais geral que poderia(m) não ser classificada(s) como qualquer dos
+			    <i>classificadores</i> mais específicos presentes naquele conjunto de generalização.</li>
+			</ul>
+			
+			<p>A segunda propriedade, <i>isDisjoint</i>, especifica se os <i>classificadores</i> daquele
+			conjunto de generalização podem se sobrepor, e assume um dos seguintes valores:</p>
+			
+            <ul>
+                <li><strong>disjoint:</strong> indica que nenhuma instância de qualquer <i>classificador</i>
+                específico pode ser instância de qualquer outro naquele grupo;</li>
+                
+                <li><strong>overlapping:</strong> indica que alguns ou todos dos classificadores específicos
+                daquele grupo pode ser instância de outro(s) do mesmo grupo.</li>
+            </ul>
+            
+			<p>O exemplo a seguir foi retirado da especificação da superestrutura da versão 2.4.1 da UML,
+			disponibilizada pela OMG:</p>
+			
+			<p><img src="../../images/class_examples/example_PGS.png" /></p>
+        </div>
+    </div>
+</div>
+</body>
+</html>

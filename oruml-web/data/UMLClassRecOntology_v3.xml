@@ -1,0 +1,551 @@
+<?xml version="1.0"?>
+
+
+<!DOCTYPE rdf:RDF [
+    <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
+    <!ENTITY dc "http://purl.org/dc/elements/1.1/" >
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+    <!ENTITY umlclassrec "http://splab.computacao.ufcg.edu.br/umlrec/umlclassrec" >
+]>
+
+
+<rdf:RDF xmlns="&umlclassrec;#"
+     xml:base="http://splab.computacao.ufcg.edu.br/umlrec/umlclassrec"
+     xmlns:umlclassrec="http://splab.computacao.ufcg.edu.br/umlrec/umlclassrec"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:dc="http://purl.org/dc/elements/1.1/">
+    <owl:Ontology rdf:about="http://splab.computacao.ufcg.edu.br/umlrec/umlclassrec">
+        <rdfs:label>UMLClassRec</rdfs:label>
+        <rdfs:comment>UMLClassRec</rdfs:comment>
+        <dc:title>Class Diagram&apos;s Recommendation Ontology</dc:title>
+        <dc:description>Class Diagram&apos;s Recommendation Ontology</dc:description>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://splab.computacao.ufcg.edu.br/umlrec/umlclassrec#aggregation -->
+
+    <owl:ObjectProperty rdf:about="&umlclassrec;#aggregation">
+        <rdfs:range rdf:resource="&umlclassrec;#AggregationKind"/>
+        <rdfs:domain rdf:resource="&umlclassrec;#Property"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://splab.computacao.ufcg.edu.br/umlrec/umlclassrec#defaultValue -->
+
+    <owl:ObjectProperty rdf:about="&umlclassrec;#defaultValue">
+        <rdfs:domain rdf:resource="&umlclassrec;#Property"/>
+        <rdfs:range rdf:resource="&umlclassrec;#ValueSpecification"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://splab.computacao.ufcg.edu.br/umlrec/umlclassrec#navigableOwnedEnd -->
+
+    <owl:ObjectProperty rdf:about="&umlclassrec;#navigableOwnedEnd">
+        <rdfs:domain rdf:resource="&umlclassrec;#Association"/>
+        <rdfs:range rdf:resource="&umlclassrec;#Property"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://splab.computacao.ufcg.edu.br/umlrec/umlclassrec#ownedEnd -->
+
+    <owl:ObjectProperty rdf:about="&umlclassrec;#ownedEnd">
+        <rdfs:domain rdf:resource="&umlclassrec;#Association"/>
+        <rdfs:range rdf:resource="&umlclassrec;#Property"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://splab.computacao.ufcg.edu.br/umlrec/umlclassrec#qualifier -->
+
+    <owl:ObjectProperty rdf:about="&umlclassrec;#qualifier">
+        <rdfs:range rdf:resource="&umlclassrec;#Property"/>
+        <rdfs:domain rdf:resource="&umlclassrec;#Property"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://splab.computacao.ufcg.edu.br/umlrec/umlclassrec#AggregationKindProperty -->
+
+    <owl:DatatypeProperty rdf:about="&umlclassrec;#AggregationKindProperty"/>
+    
+
+
+    <!-- http://splab.computacao.ufcg.edu.br/umlrec/umlclassrec#composite -->
+
+    <owl:DatatypeProperty rdf:about="&umlclassrec;#composite">
+        <rdfs:subPropertyOf rdf:resource="&umlclassrec;#AggregationKindProperty"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://splab.computacao.ufcg.edu.br/umlrec/umlclassrec#isAbstract -->
+
+    <owl:DatatypeProperty rdf:about="&umlclassrec;#isAbstract">
+        <rdfs:domain rdf:resource="&umlclassrec;#BehavioralFeature"/>
+        <rdfs:domain rdf:resource="&umlclassrec;#Class"/>
+        <rdfs:range rdf:resource="&xsd;boolean"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://splab.computacao.ufcg.edu.br/umlrec/umlclassrec#isDerived -->
+
+    <owl:DatatypeProperty rdf:about="&umlclassrec;#isDerived">
+        <rdfs:domain rdf:resource="&umlclassrec;#Property"/>
+        <rdfs:range rdf:resource="&xsd;boolean"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://splab.computacao.ufcg.edu.br/umlrec/umlclassrec#isStatic -->
+
+    <owl:DatatypeProperty rdf:about="&umlclassrec;#isStatic">
+        <rdfs:domain rdf:resource="&umlclassrec;#Feature"/>
+        <rdfs:range rdf:resource="&xsd;boolean"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://splab.computacao.ufcg.edu.br/umlrec/umlclassrec#isTemplate -->
+
+    <owl:DatatypeProperty rdf:about="&umlclassrec;#isTemplate">
+        <rdfs:domain rdf:resource="&umlclassrec;#Classifier"/>
+        <rdfs:range rdf:resource="&xsd;boolean"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://splab.computacao.ufcg.edu.br/umlrec/umlclassrec#none -->
+
+    <owl:DatatypeProperty rdf:about="&umlclassrec;#none">
+        <rdfs:subPropertyOf rdf:resource="&umlclassrec;#AggregationKindProperty"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://splab.computacao.ufcg.edu.br/umlrec/umlclassrec#shared -->
+
+    <owl:DatatypeProperty rdf:about="&umlclassrec;#shared">
+        <rdfs:subPropertyOf rdf:resource="&umlclassrec;#AggregationKindProperty"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://splab.computacao.ufcg.edu.br/umlrec/umlclassrec#Abstraction -->
+
+    <owl:Class rdf:about="&umlclassrec;#Abstraction">
+        <rdfs:label>Abstraction</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&umlclassrec;#Dependency"/>
+    </owl:Class>
+    
+
+
+    <!-- http://splab.computacao.ufcg.edu.br/umlrec/umlclassrec#AggregationKind -->
+
+    <owl:Class rdf:about="&umlclassrec;#AggregationKind">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&umlclassrec;#composite"/>
+                <owl:someValuesFrom rdf:resource="&xsd;string"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&umlclassrec;#none"/>
+                <owl:someValuesFrom rdf:resource="&xsd;string"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&umlclassrec;#shared"/>
+                <owl:someValuesFrom rdf:resource="&xsd;string"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+    </owl:Class>
+    
+
+
+    <!-- http://splab.computacao.ufcg.edu.br/umlrec/umlclassrec#Association -->
+
+    <owl:Class rdf:about="&umlclassrec;#Association">
+        <rdfs:label>Association</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&umlclassrec;#Classifier"/>
+        <rdfs:subClassOf rdf:resource="&umlclassrec;#Relationship"/>
+    </owl:Class>
+    
+
+
+    <!-- http://splab.computacao.ufcg.edu.br/umlrec/umlclassrec#AssociationClass -->
+
+    <owl:Class rdf:about="&umlclassrec;#AssociationClass">
+        <rdfs:label>AssociationClass</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&umlclassrec;#Association"/>
+        <rdfs:subClassOf rdf:resource="&umlclassrec;#Class"/>
+    </owl:Class>
+    
+
+
+    <!-- http://splab.computacao.ufcg.edu.br/umlrec/umlclassrec#BehavioralFeature -->
+
+    <owl:Class rdf:about="&umlclassrec;#BehavioralFeature">
+        <rdfs:label>BehavioralFeature</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&umlclassrec;#Feature"/>
+        <rdfs:subClassOf rdf:resource="&umlclassrec;#Namespace"/>
+    </owl:Class>
+    
+
+
+    <!-- http://splab.computacao.ufcg.edu.br/umlrec/umlclassrec#BehavioredClassifier -->
+
+    <owl:Class rdf:about="&umlclassrec;#BehavioredClassifier">
+        <rdfs:label>BehavioredClassifier</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&umlclassrec;#Classifier"/>
+    </owl:Class>
+    
+
+
+    <!-- http://splab.computacao.ufcg.edu.br/umlrec/umlclassrec#Class -->
+
+    <owl:Class rdf:about="&umlclassrec;#Class">
+        <rdfs:label>Class</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&umlclassrec;#BehavioredClassifier"/>
+        <rdfs:subClassOf rdf:resource="&umlclassrec;#EncapsulatedClassifier"/>
+    </owl:Class>
+    
+
+
+    <!-- http://splab.computacao.ufcg.edu.br/umlrec/umlclassrec#Classifier -->
+
+    <owl:Class rdf:about="&umlclassrec;#Classifier">
+        <rdfs:label>Classifier</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&umlclassrec;#Namespace"/>
+        <rdfs:subClassOf rdf:resource="&umlclassrec;#RedefinableElement"/>
+        <rdfs:subClassOf rdf:resource="&umlclassrec;#TemplateableElement"/>
+        <rdfs:subClassOf rdf:resource="&umlclassrec;#Type"/>
+    </owl:Class>
+    
+
+
+    <!-- http://splab.computacao.ufcg.edu.br/umlrec/umlclassrec#ConnectableElement -->
+
+    <owl:Class rdf:about="&umlclassrec;#ConnectableElement">
+        <rdfs:label>ConnectableElement</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&umlclassrec;#ParameterableElement"/>
+        <rdfs:subClassOf rdf:resource="&umlclassrec;#TypedElement"/>
+    </owl:Class>
+    
+
+
+    <!-- http://splab.computacao.ufcg.edu.br/umlrec/umlclassrec#DataType -->
+
+    <owl:Class rdf:about="&umlclassrec;#DataType">
+        <rdfs:label>DataType</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&umlclassrec;#Classifier"/>
+    </owl:Class>
+    
+
+
+    <!-- http://splab.computacao.ufcg.edu.br/umlrec/umlclassrec#Dependency -->
+
+    <owl:Class rdf:about="&umlclassrec;#Dependency">
+        <rdfs:label>Dependency</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&umlclassrec;#DirectedRelationship"/>
+        <rdfs:subClassOf rdf:resource="&umlclassrec;#PackageableElement"/>
+    </owl:Class>
+    
+
+
+    <!-- http://splab.computacao.ufcg.edu.br/umlrec/umlclassrec#DeploymentTarget -->
+
+    <owl:Class rdf:about="&umlclassrec;#DeploymentTarget">
+        <rdfs:label>DeploymentTarget</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&umlclassrec;#NamedElement"/>
+    </owl:Class>
+    
+
+
+    <!-- http://splab.computacao.ufcg.edu.br/umlrec/umlclassrec#DirectedRelationship -->
+
+    <owl:Class rdf:about="&umlclassrec;#DirectedRelationship">
+        <rdfs:label>DirectedRelationship</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&umlclassrec;#Relationship"/>
+    </owl:Class>
+    
+
+
+    <!-- http://splab.computacao.ufcg.edu.br/umlrec/umlclassrec#Element -->
+
+    <owl:Class rdf:about="&umlclassrec;#Element">
+        <rdfs:label>Element</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://splab.computacao.ufcg.edu.br/umlrec/umlclassrec#EncapsulatedClassifier -->
+
+    <owl:Class rdf:about="&umlclassrec;#EncapsulatedClassifier">
+        <rdfs:label>EncapsulatedClassifier</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&umlclassrec;#StructuredClassifier"/>
+    </owl:Class>
+    
+
+
+    <!-- http://splab.computacao.ufcg.edu.br/umlrec/umlclassrec#Enumeration -->
+
+    <owl:Class rdf:about="&umlclassrec;#Enumeration">
+        <rdfs:subClassOf rdf:resource="&umlclassrec;#DataType"/>
+    </owl:Class>
+    
+
+
+    <!-- http://splab.computacao.ufcg.edu.br/umlrec/umlclassrec#Feature -->
+
+    <owl:Class rdf:about="&umlclassrec;#Feature">
+        <rdfs:label>Feature</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&umlclassrec;#RedefinableElement"/>
+    </owl:Class>
+    
+
+
+    <!-- http://splab.computacao.ufcg.edu.br/umlrec/umlclassrec#Generalization -->
+
+    <owl:Class rdf:about="&umlclassrec;#Generalization">
+        <rdfs:subClassOf rdf:resource="&umlclassrec;#DirectedRelationship"/>
+    </owl:Class>
+    
+
+
+    <!-- http://splab.computacao.ufcg.edu.br/umlrec/umlclassrec#GeneralizationSet -->
+
+    <owl:Class rdf:about="&umlclassrec;#GeneralizationSet">
+        <rdfs:subClassOf rdf:resource="&umlclassrec;#PackageableElement"/>
+    </owl:Class>
+    
+
+
+    <!-- http://splab.computacao.ufcg.edu.br/umlrec/umlclassrec#Interface -->
+
+    <owl:Class rdf:about="&umlclassrec;#Interface">
+        <rdfs:subClassOf rdf:resource="&umlclassrec;#Classifier"/>
+    </owl:Class>
+    
+
+
+    <!-- http://splab.computacao.ufcg.edu.br/umlrec/umlclassrec#InterfaceRealization -->
+
+    <owl:Class rdf:about="&umlclassrec;#InterfaceRealization">
+        <rdfs:subClassOf rdf:resource="&umlclassrec;#Realization"/>
+    </owl:Class>
+    
+
+
+    <!-- http://splab.computacao.ufcg.edu.br/umlrec/umlclassrec#MultiplicityElement -->
+
+    <owl:Class rdf:about="&umlclassrec;#MultiplicityElement">
+        <rdfs:label>MultiplicityElement</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&umlclassrec;#Element"/>
+    </owl:Class>
+    
+
+
+    <!-- http://splab.computacao.ufcg.edu.br/umlrec/umlclassrec#NamedElement -->
+
+    <owl:Class rdf:about="&umlclassrec;#NamedElement">
+        <rdfs:label>NamedElement</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&umlclassrec;#Element"/>
+    </owl:Class>
+    
+
+
+    <!-- http://splab.computacao.ufcg.edu.br/umlrec/umlclassrec#Namespace -->
+
+    <owl:Class rdf:about="&umlclassrec;#Namespace">
+        <rdfs:label>Namespace</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&umlclassrec;#NamedElement"/>
+    </owl:Class>
+    
+
+
+    <!-- http://splab.computacao.ufcg.edu.br/umlrec/umlclassrec#Operation -->
+
+    <owl:Class rdf:about="&umlclassrec;#Operation">
+        <rdfs:subClassOf rdf:resource="&umlclassrec;#BehavioralFeature"/>
+        <rdfs:subClassOf rdf:resource="&umlclassrec;#ParameterableElement"/>
+        <rdfs:subClassOf rdf:resource="&umlclassrec;#TemplateableElement"/>
+    </owl:Class>
+    
+
+
+    <!-- http://splab.computacao.ufcg.edu.br/umlrec/umlclassrec#PackageableElement -->
+
+    <owl:Class rdf:about="&umlclassrec;#PackageableElement">
+        <rdfs:label>PackageableElement</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&umlclassrec;#NamedElement"/>
+        <rdfs:subClassOf rdf:resource="&umlclassrec;#ParameterableElement"/>
+    </owl:Class>
+    
+
+
+    <!-- http://splab.computacao.ufcg.edu.br/umlrec/umlclassrec#ParameterableElement -->
+
+    <owl:Class rdf:about="&umlclassrec;#ParameterableElement">
+        <rdfs:label>ParameterableElement</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&umlclassrec;#Element"/>
+    </owl:Class>
+    
+
+
+    <!-- http://splab.computacao.ufcg.edu.br/umlrec/umlclassrec#Port -->
+
+    <owl:Class rdf:about="&umlclassrec;#Port">
+        <rdfs:subClassOf rdf:resource="&umlclassrec;#Property"/>
+    </owl:Class>
+    
+
+
+    <!-- http://splab.computacao.ufcg.edu.br/umlrec/umlclassrec#Property -->
+
+    <owl:Class rdf:about="&umlclassrec;#Property">
+        <rdfs:subClassOf rdf:resource="&umlclassrec;#ConnectableElement"/>
+        <rdfs:subClassOf rdf:resource="&umlclassrec;#DeploymentTarget"/>
+        <rdfs:subClassOf rdf:resource="&umlclassrec;#StructuralFeature"/>
+    </owl:Class>
+    
+
+
+    <!-- http://splab.computacao.ufcg.edu.br/umlrec/umlclassrec#Realization -->
+
+    <owl:Class rdf:about="&umlclassrec;#Realization">
+        <rdfs:label>Realization</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&umlclassrec;#Abstraction"/>
+    </owl:Class>
+    
+
+
+    <!-- http://splab.computacao.ufcg.edu.br/umlrec/umlclassrec#RedefinableElement -->
+
+    <owl:Class rdf:about="&umlclassrec;#RedefinableElement">
+        <rdfs:label>RedefinableElement</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&umlclassrec;#NamedElement"/>
+    </owl:Class>
+    
+
+
+    <!-- http://splab.computacao.ufcg.edu.br/umlrec/umlclassrec#Relationship -->
+
+    <owl:Class rdf:about="&umlclassrec;#Relationship">
+        <rdfs:label>Relationship</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&umlclassrec;#Element"/>
+    </owl:Class>
+    
+
+
+    <!-- http://splab.computacao.ufcg.edu.br/umlrec/umlclassrec#StructuralFeature -->
+
+    <owl:Class rdf:about="&umlclassrec;#StructuralFeature">
+        <rdfs:label>StructuralFeature</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&umlclassrec;#Feature"/>
+        <rdfs:subClassOf rdf:resource="&umlclassrec;#MultiplicityElement"/>
+        <rdfs:subClassOf rdf:resource="&umlclassrec;#TypedElement"/>
+    </owl:Class>
+    
+
+
+    <!-- http://splab.computacao.ufcg.edu.br/umlrec/umlclassrec#StructuredClassifier -->
+
+    <owl:Class rdf:about="&umlclassrec;#StructuredClassifier">
+        <rdfs:label>StructuredClassifier</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&umlclassrec;#Classifier"/>
+    </owl:Class>
+    
+
+
+    <!-- http://splab.computacao.ufcg.edu.br/umlrec/umlclassrec#TemplateableElement -->
+
+    <owl:Class rdf:about="&umlclassrec;#TemplateableElement">
+        <rdfs:label>TemplateableElement</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&umlclassrec;#Element"/>
+    </owl:Class>
+    
+
+
+    <!-- http://splab.computacao.ufcg.edu.br/umlrec/umlclassrec#Type -->
+
+    <owl:Class rdf:about="&umlclassrec;#Type">
+        <rdfs:label>Type</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&umlclassrec;#PackageableElement"/>
+    </owl:Class>
+    
+
+
+    <!-- http://splab.computacao.ufcg.edu.br/umlrec/umlclassrec#TypedElement -->
+
+    <owl:Class rdf:about="&umlclassrec;#TypedElement">
+        <rdfs:label>TypedElement</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&umlclassrec;#NamedElement"/>
+    </owl:Class>
+    
+
+
+    <!-- http://splab.computacao.ufcg.edu.br/umlrec/umlclassrec#Usage -->
+
+    <owl:Class rdf:about="&umlclassrec;#Usage">
+        <rdfs:subClassOf rdf:resource="&umlclassrec;#Dependency"/>
+    </owl:Class>
+    
+
+
+    <!-- http://splab.computacao.ufcg.edu.br/umlrec/umlclassrec#ValueSpecification -->
+
+    <owl:Class rdf:about="&umlclassrec;#ValueSpecification">
+        <rdfs:subClassOf rdf:resource="&umlclassrec;#PackageableElement"/>
+        <rdfs:subClassOf rdf:resource="&umlclassrec;#TypedElement"/>
+    </owl:Class>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 3.5.1) http://owlapi.sourceforge.net -->
+

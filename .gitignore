@@ -1,0 +1,6 @@
+oruml-web/src/main/resources/static/images/class_diagrams/*
+oruml-web/src/main/resources/static/images/sequence_diagrams/*
+/**/.settings
+/**/.project
+/**/.classpath
+*~

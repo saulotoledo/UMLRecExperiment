@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html layout:decorator="layout">
+<head>
+    <title></title>
+</head>
+<body>
+    <div layout:fragment="content">
+        <div class="container pt">
+            <form class="selectionsForm" method="POST" role="form" th:action="@{/3}">
+                <div class="row mt">
+                    <div class="col-lg-6 col-lg-offset-3 centered">
+                        <h3 th:text="#{THIRD_STEP_TITLE}"></h3>
+                        <hr />
+                        <p th:if="${currentApproachIndex == 0}" th:text="#{THIRD_STEP_INTRO_01}"></p>
+                        <p th:if="${currentApproachIndex == 1}" th:text="#{THIRD_STEP_INTRO_02}"></p>
+                        <p th:if="${currentApproachIndex == 2}" th:text="#{THIRD_STEP_INTRO_03}"></p>
+                        <div th:if="${currentApproachIndex == 3}">
+	                        <p th:if="${diagramType == 'class'}" th:text="#{THIRD_STEP_INTRO_04_CLASS}"></p>
+	                        <p th:if="${diagramType == 'sequence'}" th:text="#{THIRD_STEP_INTRO_04_SEQUENCE}"></p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="row mt carousel slide">
+                    <div class="col-xs-12 col-sm-4 user-profile-box">
+                        <p th:text="#{STEP03_USER_PROFILE_BOX_INTRO}"></p>
+                        <p th:text="#{STEP03_USER_PROFILE_YOU_HAVE_SELECTED}"></p>
+                        <ul>
+                            <li th:if="${diagramType == 'class'}"
+                                th:each="item, row: ${userSelections}">
+                                <span th:text="#{${'CLASS_FEATURE_' + item}}"></span>
+                                &nbsp; <a href="javascript:;" th:onclick="${'eModal.iframe(`helpdialogs/class/class_help_' + item + '.html`, `'} + #{${'CLASS_FEATURE_' + item}} + ${'`)'}">
+                                    <span class="glyphicon glyphicon-question-sign"></span>
+                                </a>
+                            </li>
+                            <li th:if="${diagramType == 'sequence'}"
+                                th:each="item, row: ${userSelections}">
+                                <span th:text="#{${'SEQUENCE_FEATURE_' + item}}"></span>
+                                &nbsp; <a href="javascript:;" th:onclick="${'eModal.iframe(`helpdialogs/sequence/sequence_help_' + item + '.html`, `'} + #{${'SEQUENCE_FEATURE_' + item}} + ${'`)'}">
+                                    <span class="glyphicon glyphicon-question-sign"></span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="col-xs-12 col-sm-8 centered">
+                        <div th:if="${currentTopN == null}">
+                            <script type="text/javascript">
+                            location.reload();
+                            </script>
+                        </div>
+                        <div class="row" th:each="item, row: ${currentTopN}">
+                            <div class="col-xs-12">
+                                <div class="row">
+                                    <div class="col-xs-8 diagram">
+                                        <a href="javascript:;" th:onclick="${'eModal.iframe(`/diagram?id=' + item + '`, `'} + #{STEP03_DIAGRAM_DIALOG_TITLE} + ${'`)'}">
+                                            <img th:src="${'/diagram?id=' + item}"
+                                                 width="250"
+                                            />
+                                        </a>
+                                    </div>
+                                    <div class="col-xs-4 text-left">
+                                        <div class="form-group">
+                                            <input type="radio" required="required" th:name="${ item }" th:id="${'diagram' + item + '-accept'}" th:value="1" /> <label th:for="${'diagram' + item + '-accept'}" th:text="#{STEP03_DIAGRAM_ACCEPT}" />
+                                        </div>
+                                        <div class="form-group">
+                                            <input type="radio" required="required" th:name="${ item }" th:id="${'diagram' + item + '-reject'}" th:value="0" /> <label th:for="${'diagram' + item + '-reject'}" th:text="#{STEP03_DIAGRAM_REJECT}" />
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-xs-12">
+                                        <hr />
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="row mt">
+                    <div class="form-group">
+                        <button type="submit"
+                                name="submit"
+                                id="selectionsFormSubmit"
+                                class="btn btn-lg btn-primary ladda-button pull-right"
+                                ladda="submitting"
+                                data-style="expand-right"
+                                ng-click="finish()">
+                            <span class="ladda-label" th:text="#{STEP01_SUBMIT_BUTTON}"></span>
+                        </button>
+                    </div>
+                </div>
+                <!-- /row -->
+            </form>
+        </div>
+        <!-- /container -->
+    </div>
+</body>
+</html>

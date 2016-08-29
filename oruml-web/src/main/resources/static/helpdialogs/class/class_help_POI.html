@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    
+    <link href="/webjars/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="/webjars/bootstrap-material-design/0.3.0/dist/css/material.css" rel="stylesheet" />
+    <link href="/webjars/bootstrap-material-design/0.3.0/dist/css/ripples.css" rel="stylesheet" />
+    <link href="/css/styles.css" rel="stylesheet" />
+</head>
+<body>
+<div class="container agreement-term">
+    <div class="row">
+        <div class="col-xs-12">
+            <p>Uma interface é a definição de um tipo, sem especificação de comportamento.
+            Ela contém um conjunto de recursos que permitem a interação entre a unidade
+            e o que lhe é exterior. Estes recursos são as operações, em termos de UML.</p>
+            
+            <p>Interfaces, quando bem utilizadas, contribuem fortemente para a redução de
+            acoplamento no sistema. Geralmente, elas são representadas por um retângulo com
+            "<i>&laquo;interface&raquo;</i>", como na imagem a seguir:</p>
+            
+            <p><img src="../../images/class_examples/example_POI_PRI_01.png" /></p>
+            
+            <p>Como interfaces são definições, elas não são instanciáveis. Portanto, uma
+            especificação de interface é <b>implementada</b> por um outro elemento. Assim, este
+            outro elemento apresenta uma fachada pública que obedece à especificação da
+            interface.</p>
+            
+            <p>Classes podem implementar mais de uma interface, e interfaces podem ser
+            implementadas por várias classes. Uma associação entre uma interface e uma
+            classe implica que uma associação de conformidade deve existir entre qualquer
+            implementação daquela interface.</p>
+            
+            <!--
+            <p>O conjunto de <i>interfaces realizadas</i> por uma classe são suas <i>interfaces providas</i>,
+            e representam as obrigações que instâncias daquelas classes tem para seus clientes.
+            Em outras palavras, elas descrevem os serviços que as instâncias daquela classe
+            oferecem a seus clientes. Interfaces também podem ser usadas para especificar
+            <i>interfaces requeridas</i>, que são especificadas por uma dependência
+            entre a classe e as interfaces correspondentes, como no exemplo a seguir:</p>
+            
+            <p><img src="../../images/class_examples/example_POI_PRI_02.png" /></p>
+            
+            Interfaces requeridas especificam serviços que uma classe precisa para realizar
+            as suas funções.
+            -->
+             
+            <p>Uma interface realizada (provida, implementada) por uma classe pode ser
+            representada das formas apresentadas na imagem abaixo:</p>
+            
+            <p><img src="../../images/class_examples/example_POI_PRI_02.png" /></p>
+            
+            <p>Uma interface requerida pode ser representada por um meio círculo conectado
+            por uma linha sólida à classe que a requer, ou com uma relação de dependência,
+            como no próximo exemplo:</p>
+              
+            <p><img src="../../images/class_examples/example_POI_PRI_03.png" /></p>
+        </div>
+    </div>
+</div>
+</body>
+</html>

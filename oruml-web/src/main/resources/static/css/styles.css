@@ -1,0 +1,172 @@
+@import 'theme.css';
+
+.navbar.navbar,
+.navbar-default.navbar {
+    background-color: #009688;
+}
+
+.navbar-inverse {
+    padding-top: 0;
+    padding-bottom: 0;
+}
+
+h1 {
+    font-size: 30px;
+}
+
+p {
+    text-align: justify;
+    font-size: 14px;
+}
+
+p.highlight {
+	color: rgb(218, 0, 0);
+}
+
+#ww {
+    padding: 10px;
+}
+
+.pt {
+    padding: 30px;
+}
+    .pt .mt {
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+
+.zoomContainer {
+    z-index: 99999 !important;
+}
+
+@media (max-width: 992px) {
+    .secondcol {
+        margin-top: -10px;
+    }
+}
+
+.glyphicon {
+    font-size: 16px;
+}
+
+*[data-toggle="popover"] {
+    display: none;
+}
+
+.introjs-fixParent {
+    position: initial !important;
+}
+
+.introjs-helperNumberLayer {
+    padding: 10px 22px 26px 15px !important;
+}
+
+.row.help {
+    margin: 0 0 20px 0;
+}
+    .row.help div.divider {
+        margin: 10px 0 25px 0;
+    }
+
+.container .user-profile-box, .container .user-experiment-id-box {
+    background-color: #D4F3EF;
+    border: 3px solid #00776A;
+    padding: 20px;
+    margin-bottom: 20px;
+    text-align: left;
+}
+    
+    .container .user-profile-box *, .container .user-experiment-id-box * {
+        color: #00776A;
+    }
+    
+    .container .user-profile-box li {
+        margin-left: 0;
+        margin-top: 20px;
+    }
+    
+    .container .user-experiment-id-box a,
+    .container .user-experiment-id-box a:link,
+    .container .user-experiment-id-box a:hover,
+    .container .user-experiment-id-box a:visited,
+    .container .user-experiment-id-box a:active {
+        color: #0D92F1;
+        font-weight: bold;
+    }
+    
+    .container .user-experiment-id-box a:hover {
+        text-decoration: underline;
+    }
+    
+    .container .user-experiment-id-box p {
+        text-align: left;
+    }
+    
+    .container #final-link {
+        display: none;
+    }
+
+.diagram {
+	background: url('/images/loader.gif') no-repeat center 20px;
+	min-height: 200px;
+}
+
+select {
+    border: 1px solid #ccc !important;
+    max-width: 280px;
+}
+
+label.error {
+    color: red;
+}
+
+#agreementTerms {
+    display: none;
+}
+
+.agreement-term {
+    padding: 0px 30px;
+}
+    .agreement-term p,
+    .agreement-term ul li {
+        text-align: justify;
+        line-height: 200%;
+    }
+    
+    .agreement-term ul li {
+        margin-bottom: 25px;
+    }
+
+iframe {
+    padding: 20px;
+}
+
+.selectionsForm label.error {
+    position: absolute;
+    margin-top: 90px;
+}
+
+    .selectionsForm input[type=radio] {
+        cursor: pointer;
+    }
+    
+    .selectionsForm .form-group label {
+        padding: 5px 10px 0px 5px;
+        cursor: pointer;
+    }
+
+.warning {
+	color: red;
+	font-weight: bold;
+}
+
+.dialog-body {
+    max-height: 400px;
+    overflow-y: scroll;
+    padding: 10px;
+}
+
+#footer {
+    padding-top: 0;
+    padding-bottom: 0;
+}

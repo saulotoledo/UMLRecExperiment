@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html layout:decorator="layout">
+<head>
+    <title></title>
+</head>
+<body>
+    <div layout:fragment="content">
+        <div class="container pt">
+            <div class="row mt">
+                <div class="col-lg-6 col-lg-offset-3 centered">
+                    <h3 th:text="#{FOURTH_STEP_TITLE}"></h3>
+                    <hr />
+                    <p th:text="#{FOURTH_STEP_INTRO}"></p>
+                    <p class="warning" th:text="#{FOURTH_STEP_WARNING}"></p>
+                </div>
+            </div>
+
+            <div class="row mt">
+                <div class="col-xs-6 col-xs-offset-3 col-sm-4 col-sm-offset-4 user-experiment-id-box">
+                    <h3><span th:text="#{FOURTH_STEP_USER_ID}"></span> <span th:text="${experimentId}"></span>.</h3>
+                    
+                    <p class="centered"><a th:href="${finalFormUrl}" th:text="#{FOURTH_STEP_FINAL_FORM_LINK}" target="_blank"></a></p>
+                </div>
+            </div>
+            
+            <div class="row mt">
+                <div class="col-xs-12">
+                    <div class="form-group">
+                        <div class="checkbox">
+                            <label>
+                                <input type="checkbox" onchange="toggleStartAgainLink()" id="optionFinished" name="optionFinished" />
+                                <span class="checkbox-material">
+                                    <span class="check"></span>
+                                </span>
+                                &nbsp; <span th:text="#{FOURTH_STEP_ALREADY_FINISHED_CHECKBOX}"></span> &nbsp;
+                            </label>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xs-6 col-xs-offset-3 col-sm-4 col-sm-offset-4" id="final-link">
+                    <p>
+	                    <span th:text="#{FOURTH_STEP_THANKYOU_INTRO}"></span>
+	                    <a th:text="#{FOURTH_STEP_START_AGAIN_LINK}" th:href="@{/clear}"></a>.
+	                    <span th:text="#{FOURTH_STEP_THANKYOU_CONCLUSION}"></span>
+                    </p>
+                </div>
+            </div>
+            <!-- /row -->
+        </div>
+        <!-- /container -->
+    </div>
+</body>
+</html>

@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+</head>
+<body>
+    <div th:fragment="options">
+        
+        <script th:inline="javascript">
+        /*<![CDATA[*/
+            var dialogTitlePSA = [[#{CLASS_FEATURE_PSA_INFO_TITLE}]];
+            var dialogTitlePADV = [[#{CLASS_FEATURE_PADV_INFO_TITLE}]];
+            var dialogTitlePTC = [[#{CLASS_FEATURE_PTC_INFO_TITLE}]];
+            var dialogTitlePSO = [[#{CLASS_FEATURE_PSO_INFO_TITLE}]];
+            var dialogTitlePSHA = [[#{CLASS_FEATURE_PSHA_INFO_TITLE}]];
+            var dialogTitlePOQ = [[#{CLASS_FEATURE_POQ_INFO_TITLE}]];
+            var dialogTitlePOP = [[#{CLASS_FEATURE_POP_INFO_TITLE}]];
+            var dialogTitlePOI = [[#{CLASS_FEATURE_POI_INFO_TITLE}]];
+            var dialogTitlePOG = [[#{CLASS_FEATURE_POG_INFO_TITLE}]];
+            var dialogTitlePOD = [[#{CLASS_FEATURE_POD_INFO_TITLE}]];
+            var dialogTitlePNAA = [[#{CLASS_FEATURE_PNAA_INFO_TITLE}]];
+            var dialogTitlePGS = [[#{CLASS_FEATURE_PGS_INFO_TITLE}]];
+            var dialogTitlePEN = [[#{CLASS_FEATURE_PEN_INFO_TITLE}]];
+            var dialogTitlePDA = [[#{CLASS_FEATURE_PDA_INFO_TITLE}]];
+            var dialogTitlePCOA = [[#{CLASS_FEATURE_PCOA_INFO_TITLE}]];
+            var dialogTitlePASC = [[#{CLASS_FEATURE_PASC_INFO_TITLE}]];
+            var dialogTitlePAO = [[#{CLASS_FEATURE_PAO_INFO_TITLE}]];
+            var dialogTitlePABC = [[#{CLASS_FEATURE_PABC_INFO_TITLE}]];
+            var dialogTitlePRI = [[#{CLASS_FEATURE_PRI_INFO_TITLE}]];
+        /*]]>*/
+        </script>
+    
+		<form method="POST" role="form" th:action="@{/2}">
+		    <div class="row">
+		        <div class="col-lg-6 col-md-6 col-xs-12">
+		            <div class="form-group">
+		                <div class="checkbox">
+		                    <label>
+		                        <input type="checkbox" name="userprofile" value="PSA" />
+		                        <span class="checkbox-material">
+		                            <span class="check"></span>
+		                        </span>
+		                        &nbsp; <span th:text="#{CLASS_FEATURE_PSA}"></span> &nbsp;
+		                        
+		                        <a href="javascript:;" onclick="eModal.iframe('helpdialogs/class/class_help_PSA.html', dialogTitlePSA)">
+		                            <span class="glyphicon glyphicon-question-sign"></span>
+		                        </a>
+		                    </label>
+		                </div>
+		            </div>
+		    
+		            <div class="form-group">
+		                <div class="checkbox">
+		                    <label>
+		                        <input type="checkbox" name="userprofile" value="PADV" />
+		                        <span class="checkbox-material">
+		                            <span class="check"></span>
+		                        </span>
+		                        &nbsp; <span th:text="#{CLASS_FEATURE_PADV}"></span> &nbsp;
+                                
+		                        <a href="javascript:;" onclick="eModal.iframe('helpdialogs/class/class_help_PADV.html', dialogTitlePADV)">
+		                            <span class="glyphicon glyphicon-question-sign"></span>
+		                        </a>
+		                    </label>
+		                </div>
+		            </div>
+		    
+			    <div class="form-group">
+		                <div class="checkbox">
+		                    <label>
+		                        <input type="checkbox" name="userprofile" value="PTC" />
+		                        <span class="checkbox-material">
+		                            <span class="check"></span>
+		                        </span>
+		                        &nbsp; <span th:text="#{CLASS_FEATURE_PTC}"></span> &nbsp;
+		                        
+		                        <a href="javascript:;" onclick="eModal.iframe('helpdialogs/class/class_help_PTC.html', dialogTitlePTC)">
+		                            <span class="glyphicon glyphicon-question-sign"></span>
+		                        </a>
+		                    </label>
+		                </div>
+		            </div>
+
+		            <div class="form-group">
+		                <div class="checkbox">
+		                    <label>
+		                        <input type="checkbox" name="userprofile" value="PSO" />
+		                        <span class="checkbox-material">
+		                            <span class="check"></span>
+		                        </span>
+		                        &nbsp; <span th:text="#{CLASS_FEATURE_PSO}"></span> &nbsp;
+		                        
+		                        <a href="javascript:;" onclick="eModal.iframe('helpdialogs/class/class_help_PSO.html', dialogTitlePSO)">
+		                            <span class="glyphicon glyphicon-question-sign"></span>
+		                        </a>
+		                    </label>
+		                </div>
+		            </div>
+		    
+		            <div class="form-group">
+		                <div class="checkbox">
+		                    <label>
+		                        <input type="checkbox" name="userprofile" value="PAO" />
+		                        <span class="checkbox-material">
+		                            <span class="check"></span>
+		                        </span>
+		                        &nbsp; <span th:text="#{CLASS_FEATURE_PAO}"></span> &nbsp;
+		                        
+		                        <a href="javascript:;" onclick="eModal.iframe('helpdialogs/class/class_help_PAO.html', dialogTitlePAO)">
+		                            <span class="glyphicon glyphicon-question-sign"></span>
+		                        </a>
+		                    </label>
+		                </div>
+		            </div>
+		    
+		            <div class="form-group">
+		                <div class="checkbox">
+		                    <label>
+		                        <input type="checkbox" name="userprofile" value="PABC" />
+		                        <span class="checkbox-material">
+		                            <span class="check"></span>
+		                        </span>
+		                        &nbsp; <span th:text="#{CLASS_FEATURE_PABC}"></span> &nbsp;
+		                        
+		                        <a href="javascript:;" onclick="eModal.iframe('helpdialogs/class/class_help_PABC.html', dialogTitlePABC)">
+		                            <span class="glyphicon glyphicon-question-sign"></span>
+		                        </a>
+		                    </label>
+		                </div>
+		            </div>
+		            <div class="form-group">
+		                <div class="checkbox">
+		                    <label>
+		                        <input type="checkbox" name="userprofile" value="PNAA" />
+		                        <span class="checkbox-material">
+		                            <span class="check"></span>
+		                        </span>
+		                        &nbsp; <span th:text="#{CLASS_FEATURE_PNAA}"></span> &nbsp;
+		                        
+		                        <a href="javascript:;" onclick="eModal.iframe('helpdialogs/class/class_help_PNAA.html', dialogTitlePNAA)">
+		                            <span class="glyphicon glyphicon-question-sign"></span>
+		                        </a>
+		                    </label>
+		                </div>
+		            </div>
+		    
+		            <div class="form-group">
+		                <div class="checkbox">
+		                    <label>
+		                        <input type="checkbox" name="userprofile" value="PDA" />
+		                        <span class="checkbox-material">
+		                            <span class="check"></span>
+		                        </span>
+		                        &nbsp; <span th:text="#{CLASS_FEATURE_PDA}"></span> &nbsp;
+		                        
+		                        <a href="javascript:;" onclick="eModal.iframe('helpdialogs/class/class_help_PDA.html', dialogTitlePDA)">
+		                            <span class="glyphicon glyphicon-question-sign"></span>
+		                        </a>
+		                    </label>
+		                </div>
+		            </div>
+		    
+		            <div class="form-group">
+		                <div class="checkbox">
+		                    <label>
+		                        <input type="checkbox" name="userprofile" value="POQ" />
+		                        <span class="checkbox-material">
+		                            <span class="check"></span>
+		                        </span>
+		                        &nbsp; <span th:text="#{CLASS_FEATURE_POQ}"></span> &nbsp;
+		                        
+		                        <a href="javascript:;" onclick="eModal.iframe('helpdialogs/class/class_help_POQ.html', dialogTitlePOQ)">
+		                            <span class="glyphicon glyphicon-question-sign"></span>
+		                        </a>
+		                    </label>
+		                </div>
+		            </div>
+		    
+		            <div class="form-group">
+		                <div class="checkbox">
+		                    <label>
+		                        <input type="checkbox" name="userprofile" value="PSHA" />
+		                        <span class="checkbox-material">
+		                            <span class="check"></span>
+		                        </span>
+		                        &nbsp; <span th:text="#{CLASS_FEATURE_PSHA}"></span> &nbsp;
+		                        
+		                        <a href="javascript:;" onclick="eModal.iframe('helpdialogs/class/class_help_PSHA.html', dialogTitlePSHA)">
+		                            <span class="glyphicon glyphicon-question-sign"></span>
+		                        </a>
+		                    </label>
+		                </div>
+		            </div>
+		        </div>
+		    
+		        <div class="col-lg-6 col-md-6 col-xs-12 secondcol">
+		            <div class="form-group">
+		                <div class="checkbox">
+		                    <label>
+		                        <input type="checkbox" name="userprofile" value="PCOA" />
+		                        <span class="checkbox-material">
+		                            <span class="check"></span>
+		                        </span>
+		                        &nbsp; <span th:text="#{CLASS_FEATURE_PCOA}"></span> &nbsp;
+		                        
+		                        <a href="javascript:;" onclick="eModal.iframe('helpdialogs/class/class_help_PCOA.html', dialogTitlePCOA)">
+		                            <span class="glyphicon glyphicon-question-sign"></span>
+		                        </a>
+		                    </label>
+		                </div>
+		            </div>
+		            <div class="form-group">
+		                <div class="checkbox">
+		                    <label>
+		                        <input type="checkbox" name="userprofile" value="PRI" />
+		                        <span class="checkbox-material">
+		                            <span class="check"></span>
+		                        </span>
+		                        &nbsp; <span th:text="#{CLASS_FEATURE_PRI}"></span> &nbsp;
+		                        
+		                        <a href="javascript:;" onclick="eModal.iframe('helpdialogs/class/class_help_PRI.html', dialogTitlePRI)">
+		                            <span class="glyphicon glyphicon-question-sign"></span>
+		                        </a>
+		                    </label>
+		                </div>
+		            </div>
+		            <div class="form-group">
+		                <div class="checkbox">
+		                    <label>
+		                        <input type="checkbox" name="userprofile" value="PASC" />
+		                        <span class="checkbox-material">
+		                            <span class="check"></span>
+		                        </span>
+		                        &nbsp; <span th:text="#{CLASS_FEATURE_PASC}"></span> &nbsp;
+		                        
+		                        <a href="javascript:;" onclick="eModal.iframe('helpdialogs/class/class_help_PASC.html', dialogTitlePASC)">
+		                            <span class="glyphicon glyphicon-question-sign"></span>
+		                        </a>
+		                    </label>
+		                </div>
+		            </div>
+		            <div class="form-group">
+		                <div class="checkbox">
+		                    <label>
+		                        <input type="checkbox" name="userprofile" value="PEN" />
+		                        <span class="checkbox-material">
+		                            <span class="check"></span>
+		                        </span>
+		                        &nbsp; <span th:text="#{CLASS_FEATURE_PEN}"></span> &nbsp;
+		                        
+		                        <a href="javascript:;" onclick="eModal.iframe('helpdialogs/class/class_help_PEN.html', dialogTitlePEN)">
+		                            <span class="glyphicon glyphicon-question-sign"></span>
+		                        </a>
+		                    </label>
+		                </div>
+		            </div>
+		            <div class="form-group">
+		                <div class="checkbox">
+		                    <label>
+		                        <input type="checkbox" name="userprofile" value="POP" />
+		                        <span class="checkbox-material">
+		                            <span class="check"></span>
+		                        </span>
+		                        &nbsp; <span th:text="#{CLASS_FEATURE_POP}"></span> &nbsp;
+		                        
+		                        <a href="javascript:;" onclick="eModal.iframe('helpdialogs/class/class_help_POP.html', dialogTitlePOP)">
+		                            <span class="glyphicon glyphicon-question-sign"></span>
+		                        </a>
+		                    </label>
+		                </div>
+		            </div>
+		            <div class="form-group">
+		                <div class="checkbox">
+		                    <label>
+		                        <input type="checkbox" name="userprofile" value="PGS" />
+		                        <span class="checkbox-material">
+		                            <span class="check"></span>
+		                        </span>
+		                        &nbsp; <span th:text="#{CLASS_FEATURE_PGS}"></span> &nbsp;
+		                        
+		                        <a href="javascript:;" onclick="eModal.iframe('helpdialogs/class/class_help_PGS.html', dialogTitlePGS)">
+		                            <span class="glyphicon glyphicon-question-sign"></span>
+		                        </a>
+		                    </label>
+		                </div>
+		            </div>
+		            <div class="form-group">
+		                <div class="checkbox">
+		                    <label>
+		                        <input type="checkbox" name="userprofile" value="POD" />
+		                        <span class="checkbox-material">
+		                            <span class="check"></span>
+		                        </span>
+		                        &nbsp; <span th:text="#{CLASS_FEATURE_POD}"></span> &nbsp;
+		                        
+		                        <a href="javascript:;" onclick="eModal.iframe('helpdialogs/class/class_help_POD.html', dialogTitlePOD)">
+		                            <span class="glyphicon glyphicon-question-sign"></span>
+		                        </a>
+		                    </label>
+		                </div>
+		            </div>
+		            <div class="form-group">
+		                <div class="checkbox">
+		                    <label>
+		                        <input type="checkbox" name="userprofile" value="POI" />
+		                        <span class="checkbox-material">
+		                            <span class="check"></span>
+		                        </span>
+		                        &nbsp; <span th:text="#{CLASS_FEATURE_POI}"></span> &nbsp;
+		                        
+		                        <a href="javascript:;" onclick="eModal.iframe('helpdialogs/class/class_help_POI.html', dialogTitlePOI)">
+		                            <span class="glyphicon glyphicon-question-sign"></span>
+		                        </a>
+		                    </label>
+		                </div>
+		            </div>
+		            <div class="form-group">
+		                <div class="checkbox">
+		                    <label>
+		                        <input type="checkbox" name="userprofile" value="POG" />
+		                        <span class="checkbox-material">
+		                            <span class="check"></span>
+		                        </span>
+		                        &nbsp; <span th:text="#{CLASS_FEATURE_POG}"></span> &nbsp;
+		                        
+		                        <a href="javascript:;" onclick="eModal.iframe('helpdialogs/class/class_help_POG.html', dialogTitlePOG)">
+		                            <span class="glyphicon glyphicon-question-sign"></span>
+		                        </a>
+		                    </label>
+		                </div>
+		            </div>
+		        </div>
+		    </div>
+		
+		    <div class="row">
+		        <div class="col-sm-12">
+		            <div class="form-group">
+		                <button type="submit"
+                                name="submit"
+                                id="secondFormSubmit"
+                                class="btn btn-lg btn-primary ladda-button pull-right"
+                                ladda="submitting"
+                                data-style="expand-right">
+		                    <span class="ladda-label" th:text="#{STEP01_SUBMIT_BUTTON}"></span>
+	                    </button>
+		            </div>
+		        </div>
+		    </div>
+		</form>
+    </div>
+</body>
+</html>

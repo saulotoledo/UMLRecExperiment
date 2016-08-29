@@ -1,0 +1,377 @@
+<?xml version="1.0"?>
+
+
+<!DOCTYPE rdf:RDF [
+    <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+    <!ENTITY umlsequencerec "http://splab.computacao.ufcg.edu.br/umlrec/umlsequencerec#" >
+]>
+
+
+<rdf:RDF xmlns="http://www.semanticweb.org/thaciana/ontologies/2015/7/untitled-ontology-15#"
+     xml:base="http://www.semanticweb.org/thaciana/ontologies/2015/7/untitled-ontology-15"
+     xmlns:umlsequencerec="http://splab.computacao.ufcg.edu.br/umlrec/umlsequencerec#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+    <owl:Ontology rdf:about="http://splab.computacao.ufcg.edu.br/umlrec/umlsequencerec">
+        <rdfs:label>UMLSequenceRec</rdfs:label>
+        <umlsequencerec:title>Sequence Diagrams&apos; Recommender Ontology</umlsequencerec:title>
+        <rdfs:comment>UMLSequenceRec</rdfs:comment>
+        <umlsequencerec:description>Sequence Diagrams&apos; Recommender Ontology</umlsequencerec:description>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://splab.computacao.ufcg.edu.br/umlrec/umlsequencerec#description -->
+
+    <owl:AnnotationProperty rdf:about="&umlsequencerec;description"/>
+    
+
+
+    <!-- http://splab.computacao.ufcg.edu.br/umlrec/umlsequencerec#title -->
+
+    <owl:AnnotationProperty rdf:about="&umlsequencerec;title"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://splab.computacao.ufcg.edu.br/umlrec/umlsequencerec#InteractionOperatorKind -->
+
+    <owl:DatatypeProperty rdf:about="&umlsequencerec;InteractionOperatorKind">
+        <rdfs:domain rdf:resource="&umlsequencerec;CombinedFragment"/>
+        <rdfs:range rdf:resource="&xsd;boolean"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://splab.computacao.ufcg.edu.br/umlrec/umlsequencerec#MessageSort -->
+
+    <owl:DatatypeProperty rdf:about="&umlsequencerec;MessageSort">
+        <rdfs:domain rdf:resource="&umlsequencerec;Message"/>
+        <rdfs:range rdf:resource="&xsd;boolean"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://splab.computacao.ufcg.edu.br/umlrec/umlsequencerec#alt -->
+
+    <owl:DatatypeProperty rdf:about="&umlsequencerec;alt">
+        <rdfs:subPropertyOf rdf:resource="&umlsequencerec;InteractionOperatorKind"/>
+        <owl:equivalentProperty rdf:resource="&umlsequencerec;opt"/>
+        <rdfs:range rdf:resource="&xsd;boolean"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://splab.computacao.ufcg.edu.br/umlrec/umlsequencerec#assertion -->
+
+    <owl:DatatypeProperty rdf:about="&umlsequencerec;assertion">
+        <rdfs:subPropertyOf rdf:resource="&umlsequencerec;InteractionOperatorKind"/>
+        <owl:equivalentProperty rdf:resource="&umlsequencerec;consider"/>
+        <rdfs:range rdf:resource="&xsd;boolean"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://splab.computacao.ufcg.edu.br/umlrec/umlsequencerec#asynchCall -->
+
+    <owl:DatatypeProperty rdf:about="&umlsequencerec;asynchCall">
+        <rdfs:subPropertyOf rdf:resource="&umlsequencerec;MessageSort"/>
+        <owl:equivalentProperty rdf:resource="&umlsequencerec;asynchSignal"/>
+        <owl:equivalentProperty rdf:resource="&umlsequencerec;synchCall"/>
+        <rdfs:range rdf:resource="&xsd;boolean"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://splab.computacao.ufcg.edu.br/umlrec/umlsequencerec#asynchSignal -->
+
+    <owl:DatatypeProperty rdf:about="&umlsequencerec;asynchSignal">
+        <rdfs:subPropertyOf rdf:resource="&umlsequencerec;MessageSort"/>
+        <owl:equivalentProperty rdf:resource="&umlsequencerec;synchCall"/>
+        <rdfs:range rdf:resource="&xsd;boolean"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://splab.computacao.ufcg.edu.br/umlrec/umlsequencerec#break -->
+
+    <owl:DatatypeProperty rdf:about="&umlsequencerec;break">
+        <rdfs:subPropertyOf rdf:resource="&umlsequencerec;InteractionOperatorKind"/>
+        <rdfs:range rdf:resource="&xsd;boolean"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://splab.computacao.ufcg.edu.br/umlrec/umlsequencerec#consider -->
+
+    <owl:DatatypeProperty rdf:about="&umlsequencerec;consider">
+        <rdfs:subPropertyOf rdf:resource="&umlsequencerec;InteractionOperatorKind"/>
+        <owl:equivalentProperty rdf:resource="&umlsequencerec;ignore"/>
+        <rdfs:range rdf:resource="&xsd;boolean"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://splab.computacao.ufcg.edu.br/umlrec/umlsequencerec#createMessage -->
+
+    <owl:DatatypeProperty rdf:about="&umlsequencerec;createMessage">
+        <rdfs:subPropertyOf rdf:resource="&umlsequencerec;MessageSort"/>
+        <owl:equivalentProperty rdf:resource="&umlsequencerec;deleteMessage"/>
+        <owl:equivalentProperty rdf:resource="&umlsequencerec;replyMessage"/>
+        <rdfs:range rdf:resource="&xsd;boolean"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://splab.computacao.ufcg.edu.br/umlrec/umlsequencerec#critical -->
+
+    <owl:DatatypeProperty rdf:about="&umlsequencerec;critical">
+        <rdfs:subPropertyOf rdf:resource="&umlsequencerec;InteractionOperatorKind"/>
+        <rdfs:range rdf:resource="&xsd;boolean"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://splab.computacao.ufcg.edu.br/umlrec/umlsequencerec#deleteMessage -->
+
+    <owl:DatatypeProperty rdf:about="&umlsequencerec;deleteMessage">
+        <rdfs:subPropertyOf rdf:resource="&umlsequencerec;MessageSort"/>
+        <owl:equivalentProperty rdf:resource="&umlsequencerec;replyMessage"/>
+        <rdfs:range rdf:resource="&xsd;boolean"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://splab.computacao.ufcg.edu.br/umlrec/umlsequencerec#ignore -->
+
+    <owl:DatatypeProperty rdf:about="&umlsequencerec;ignore">
+        <rdfs:subPropertyOf rdf:resource="&umlsequencerec;InteractionOperatorKind"/>
+        <rdfs:range rdf:resource="&xsd;boolean"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://splab.computacao.ufcg.edu.br/umlrec/umlsequencerec#loop -->
+
+    <owl:DatatypeProperty rdf:about="&umlsequencerec;loop">
+        <rdfs:subPropertyOf rdf:resource="&umlsequencerec;InteractionOperatorKind"/>
+        <rdfs:range rdf:resource="&xsd;boolean"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://splab.computacao.ufcg.edu.br/umlrec/umlsequencerec#negative -->
+
+    <owl:DatatypeProperty rdf:about="&umlsequencerec;negative">
+        <rdfs:subPropertyOf rdf:resource="&umlsequencerec;InteractionOperatorKind"/>
+        <rdfs:range rdf:resource="&xsd;boolean"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://splab.computacao.ufcg.edu.br/umlrec/umlsequencerec#opt -->
+
+    <owl:DatatypeProperty rdf:about="&umlsequencerec;opt">
+        <rdfs:subPropertyOf rdf:resource="&umlsequencerec;InteractionOperatorKind"/>
+        <rdfs:range rdf:resource="&xsd;boolean"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://splab.computacao.ufcg.edu.br/umlrec/umlsequencerec#par -->
+
+    <owl:DatatypeProperty rdf:about="&umlsequencerec;par">
+        <rdfs:subPropertyOf rdf:resource="&umlsequencerec;InteractionOperatorKind"/>
+        <rdfs:range rdf:resource="&xsd;boolean"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://splab.computacao.ufcg.edu.br/umlrec/umlsequencerec#replyMessage -->
+
+    <owl:DatatypeProperty rdf:about="&umlsequencerec;replyMessage">
+        <rdfs:subPropertyOf rdf:resource="&umlsequencerec;MessageSort"/>
+        <rdfs:range rdf:resource="&xsd;boolean"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://splab.computacao.ufcg.edu.br/umlrec/umlsequencerec#seq -->
+
+    <owl:DatatypeProperty rdf:about="&umlsequencerec;seq">
+        <rdfs:subPropertyOf rdf:resource="&umlsequencerec;InteractionOperatorKind"/>
+        <rdfs:range rdf:resource="&xsd;boolean"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://splab.computacao.ufcg.edu.br/umlrec/umlsequencerec#strict -->
+
+    <owl:DatatypeProperty rdf:about="&umlsequencerec;strict">
+        <rdfs:subPropertyOf rdf:resource="&umlsequencerec;InteractionOperatorKind"/>
+        <rdfs:range rdf:resource="&xsd;boolean"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://splab.computacao.ufcg.edu.br/umlrec/umlsequencerec#synchCall -->
+
+    <owl:DatatypeProperty rdf:about="&umlsequencerec;synchCall">
+        <rdfs:subPropertyOf rdf:resource="&umlsequencerec;MessageSort"/>
+        <rdfs:range rdf:resource="&xsd;boolean"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://splab.computacao.ufcg.edu.br/umlrec/umlsequencerec#Actor -->
+
+    <owl:Class rdf:about="&umlsequencerec;Actor">
+        <rdfs:subClassOf rdf:resource="&umlsequencerec;BehavioredClassifier"/>
+    </owl:Class>
+    
+
+
+    <!-- http://splab.computacao.ufcg.edu.br/umlrec/umlsequencerec#BehavioredClassifier -->
+
+    <owl:Class rdf:about="&umlsequencerec;BehavioredClassifier">
+        <rdfs:subClassOf rdf:resource="&umlsequencerec;Classifier"/>
+    </owl:Class>
+    
+
+
+    <!-- http://splab.computacao.ufcg.edu.br/umlrec/umlsequencerec#Classifier -->
+
+    <owl:Class rdf:about="&umlsequencerec;Classifier">
+        <rdfs:subClassOf rdf:resource="&umlsequencerec;Namespace"/>
+        <rdfs:subClassOf rdf:resource="&umlsequencerec;RedefinableElement"/>
+        <rdfs:subClassOf rdf:resource="&umlsequencerec;Type"/>
+    </owl:Class>
+    
+
+
+    <!-- http://splab.computacao.ufcg.edu.br/umlrec/umlsequencerec#CombinedFragment -->
+
+    <owl:Class rdf:about="&umlsequencerec;CombinedFragment">
+        <rdfs:subClassOf rdf:resource="&umlsequencerec;InteractionFragment"/>
+    </owl:Class>
+    
+
+
+    <!-- http://splab.computacao.ufcg.edu.br/umlrec/umlsequencerec#Element -->
+
+    <owl:Class rdf:about="&umlsequencerec;Element"/>
+    
+
+
+    <!-- http://splab.computacao.ufcg.edu.br/umlrec/umlsequencerec#InteractionFragment -->
+
+    <owl:Class rdf:about="&umlsequencerec;InteractionFragment">
+        <rdfs:subClassOf rdf:resource="&umlsequencerec;NamedElement"/>
+    </owl:Class>
+    
+
+
+    <!-- http://splab.computacao.ufcg.edu.br/umlrec/umlsequencerec#InteractionUse -->
+
+    <owl:Class rdf:about="&umlsequencerec;InteractionUse">
+        <rdfs:subClassOf rdf:resource="&umlsequencerec;InteractionFragment"/>
+    </owl:Class>
+    
+
+
+    <!-- http://splab.computacao.ufcg.edu.br/umlrec/umlsequencerec#Message -->
+
+    <owl:Class rdf:about="&umlsequencerec;Message">
+        <rdfs:subClassOf rdf:resource="&umlsequencerec;NamedElement"/>
+    </owl:Class>
+    
+
+
+    <!-- http://splab.computacao.ufcg.edu.br/umlrec/umlsequencerec#NamedElement -->
+
+    <owl:Class rdf:about="&umlsequencerec;NamedElement">
+        <rdfs:subClassOf rdf:resource="&umlsequencerec;Element"/>
+    </owl:Class>
+    
+
+
+    <!-- http://splab.computacao.ufcg.edu.br/umlrec/umlsequencerec#Namespace -->
+
+    <owl:Class rdf:about="&umlsequencerec;Namespace">
+        <rdfs:subClassOf rdf:resource="&umlsequencerec;NamedElement"/>
+    </owl:Class>
+    
+
+
+    <!-- http://splab.computacao.ufcg.edu.br/umlrec/umlsequencerec#PackageElement -->
+
+    <owl:Class rdf:about="&umlsequencerec;PackageElement">
+        <rdfs:subClassOf rdf:resource="&umlsequencerec;NamedElement"/>
+    </owl:Class>
+    
+
+
+    <!-- http://splab.computacao.ufcg.edu.br/umlrec/umlsequencerec#RedefinableElement -->
+
+    <owl:Class rdf:about="&umlsequencerec;RedefinableElement">
+        <rdfs:subClassOf rdf:resource="&umlsequencerec;NamedElement"/>
+    </owl:Class>
+    
+
+
+    <!-- http://splab.computacao.ufcg.edu.br/umlrec/umlsequencerec#StateInvariant -->
+
+    <owl:Class rdf:about="&umlsequencerec;StateInvariant">
+        <rdfs:subClassOf rdf:resource="&umlsequencerec;InteractionFragment"/>
+    </owl:Class>
+    
+
+
+    <!-- http://splab.computacao.ufcg.edu.br/umlrec/umlsequencerec#Type -->
+
+    <owl:Class rdf:about="&umlsequencerec;Type">
+        <rdfs:subClassOf rdf:resource="&umlsequencerec;PackageElement"/>
+    </owl:Class>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 3.5.1) http://owlapi.sourceforge.net -->
+
